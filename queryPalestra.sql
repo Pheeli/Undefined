@@ -29,4 +29,4 @@ group by nomeCorso, nomeAtleta, cognomeAtleta, categoria, eta having eta <= all 
 																			    join palestra.corso on codiceC=corso
 																			    group by corso)
 
-select nomeCorso from palestra.atleta
+select nomeAtleta from palestra.atleta

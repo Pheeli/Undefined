@@ -29,6 +29,16 @@ group by nomeCorso, nomeAtleta, cognomeAtleta, categoria, eta having eta <= all 
 																			    join palestra.corso on codiceC=corso
 																			    group by corso)
 
+/*tests*/
 select nomeAtleta from palestra.atleta
 
 select codiceC from palestra.corso
+
+select nomeCorso, nomeAtleta, cognomeAtleta, categoria, eta from palestra.corso
+join palestra.iscrizione on codiceC=corso
+join palestra.atleta on codiceA=atleta
+
+group by nomeCorso, nomeAtleta, cognomeAtleta, categoria, eta having eta <= all (select min(eta) from palestra.atleta 
+																			    join palestra.iscrizione on codiceA=atleta
+																			    join palestra.corso on codiceC=corso
+																			    group by corso)

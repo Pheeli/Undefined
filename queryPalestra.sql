@@ -28,3 +28,5 @@ group by nomeCorso, nomeAtleta, cognomeAtleta, categoria, eta having eta <= all 
 																			    join palestra.iscrizione on codiceA=atleta
 																			    join palestra.corso on codiceC=corso
 																			    group by corso)
+
+select nomeCorso from palestra.atleta

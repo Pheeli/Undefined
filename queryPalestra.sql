@@ -30,3 +30,5 @@ group by nomeCorso, nomeAtleta, cognomeAtleta, categoria, eta having eta <= all 
 																			    group by corso)
 
 select nomeAtleta from palestra.atleta
+
+select codiceC from palestra.corso
